@@ -1,0 +1,20 @@
+site_name: MicroBIM Fire Documentation
+nav:
+  - Home: Home/index.md
+  - Revit Extensions:
+      - Overview: Revit Extensions/index.md
+      - Document Extensions: Revit Extensions/DocumentExtensions.md
+      - Collection Extensions: Revit Extensions/CollectionExtensions.md
+      - View3D Extensions: Revit Extensions/View3DExtensions.md
+  - MBF WPF Toolkit:
+      - Getting Started: MBF WPF Toolkit/GettingStarted.md
+      - Controls: MBF WPF Toolkit/Controls.md
+      - Styles: MBF WPF Toolkit/Styles.md
+  - About: About/index.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+
+theme: readthedocs
