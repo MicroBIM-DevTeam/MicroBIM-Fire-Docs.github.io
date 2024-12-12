@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Document Extensions - MicroBIM Fire Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Document Extensions";
+        var mkdocs_page_input_path = "Revit Extensions\\DocumentExtensions.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> MicroBIM Fire Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Home/">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Revit Extensions</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Document Extensions</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#getfamilytypesbycategoryorderedbynameautodeskrevitdbdocumentautodeskrevitdbbuiltincategory">GetFamilyTypesByCategoryOrderedByName(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.BuiltInCategory)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters">Parameters:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#returns">Returns:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#getlevelsorderedbyproperty1autodeskrevitdbdocumentsystemfuncautodeskrevitdblevel0systemboolean">GetLevelsOrderedByProperty1(Autodesk.Revit.DB.Document,System.Func{Autodesk.Revit.DB.Level,0},System.Boolean)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_1">Parameters:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#returns_1">Returns:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#getrebarshapesautodeskrevitdbdocument">GetRebarShapes(Autodesk.Revit.DB.Document)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_2">Parameters:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#returns_2">Returns:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#getrebarbartypesautodeskrevitdbdocument">GetRebarBarTypes(Autodesk.Revit.DB.Document)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_3">Parameters:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#returns_3">Returns:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#createandplacecolumnatpointautodeskrevitdbdocumentautodeskrevitdbxyzautodeskrevitdbfamilysymbolautodeskrevitdblevelautodeskrevitdblevel">CreateAndPlaceColumnAtPoint(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.FamilySymbol,Autodesk.Revit.DB.Level,Autodesk.Revit.DB.Level)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_4">Parameters:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#returns_4">Returns:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#searchorcreate3dviewautodeskrevitdbdocumentsystemstring">SearchOrCreate3DView(Autodesk.Revit.DB.Document,System.String)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameters_5">Parameters:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#returns_5">Returns:</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CollectionExtensions/">Collection Extensions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../Revit Extensions/View3DExtensions.md">View3D Extensions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">MBF WPF Toolkit</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../../MBF WPF Toolkit/GettingStarted.md">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../MBF WPF Toolkit/Controls.md">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../MBF WPF Toolkit/Styles.md">Styles</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../About/">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">MicroBIM Fire Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Revit Extensions</li>
+      <li class="breadcrumb-item active">Document Extensions</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><strong>Summary:</strong> Provides extension methods for the Autodesk Revit API.</p>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h3 id="getfamilytypesbycategoryorderedbynameautodeskrevitdbdocumentautodeskrevitdbbuiltincategory">GetFamilyTypesByCategoryOrderedByName(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.BuiltInCategory)<a class="headerlink" href="#getfamilytypesbycategoryorderedbynameautodeskrevitdbdocumentautodeskrevitdbbuiltincategory" title="Permanent link">&para;</a></h3>
+<p><strong>Summary:</strong> Retrieves all family types of the specified category from the given Revit document as an ObservableCollection.</p>
+<h4 id="parameters">Parameters:<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>doc</code>: The Revit document to search for family types.</li>
+<li><code>category</code>: The BuiltInCategory to filter family types.</li>
+</ul>
+<h4 id="returns">Returns:<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
+<p>An ObservableCollection containing all FamilySymbol objects representing the specified category.</p>
+<hr />
+<h3 id="getlevelsorderedbyproperty1autodeskrevitdbdocumentsystemfuncautodeskrevitdblevel0systemboolean">GetLevelsOrderedByProperty<code>1(Autodesk.Revit.DB.Document,System.Func{Autodesk.Revit.DB.Level,</code>0},System.Boolean)<a class="headerlink" href="#getlevelsorderedbyproperty1autodeskrevitdbdocumentsystemfuncautodeskrevitdblevel0systemboolean" title="Permanent link">&para;</a></h3>
+<p><strong>Summary:</strong> Retrieves all levels from the specified Revit document as an ObservableCollection,
+            with dynamic ordering based on a specified property.</p>
+<h4 id="parameters_1">Parameters:<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>doc</code>: The Revit document to search for levels.</li>
+<li><code>keySelector</code>: A function to extract a key from a Level for ordering.</li>
+<li><code>ascending</code>: If true, orders levels in ascending order; otherwise, descending.</li>
+</ul>
+<h4 id="returns_1">Returns:<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
+<p>An ObservableCollection containing Level objects, ordered dynamically by the specified property.</p>
+<hr />
+<h3 id="getrebarshapesautodeskrevitdbdocument">GetRebarShapes(Autodesk.Revit.DB.Document)<a class="headerlink" href="#getrebarshapesautodeskrevitdbdocument" title="Permanent link">&para;</a></h3>
+<p><strong>Summary:</strong> Retrieves all rebar shapes from the specified Revit document.</p>
+<h4 id="parameters_2">Parameters:<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>doc</code>: The Revit document to retrieve rebar shapes from.</li>
+</ul>
+<h4 id="returns_2">Returns:<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
+<p>A list of RebarShape objects available in the document.</p>
+<hr />
+<h3 id="getrebarbartypesautodeskrevitdbdocument">GetRebarBarTypes(Autodesk.Revit.DB.Document)<a class="headerlink" href="#getrebarbartypesautodeskrevitdbdocument" title="Permanent link">&para;</a></h3>
+<p><strong>Summary:</strong> Retrieves all rebar bar types from the specified Revit document as an ObservableCollection.</p>
+<h4 id="parameters_3">Parameters:<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>doc</code>: The Revit document to retrieve rebar bar types from.</li>
+</ul>
+<h4 id="returns_3">Returns:<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
+<p>An ObservableCollection containing all RebarBarType objects in the document.</p>
+<hr />
+<h3 id="createandplacecolumnatpointautodeskrevitdbdocumentautodeskrevitdbxyzautodeskrevitdbfamilysymbolautodeskrevitdblevelautodeskrevitdblevel">CreateAndPlaceColumnAtPoint(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.FamilySymbol,Autodesk.Revit.DB.Level,Autodesk.Revit.DB.Level)<a class="headerlink" href="#createandplacecolumnatpointautodeskrevitdbdocumentautodeskrevitdbxyzautodeskrevitdbfamilysymbolautodeskrevitdblevelautodeskrevitdblevel" title="Permanent link">&para;</a></h3>
+<p><strong>Summary:</strong> Prompts the user to select a point and places a column at that point.</p>
+<h4 id="parameters_4">Parameters:<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>doc</code>: The Revit document where the column will be placed.</li>
+<li><code>point</code>: The XYZ point where the column will be placed.</li>
+<li><code>columnType</code>: The FamilySymbol representing the column type.</li>
+<li><code>baseLevel</code>: The base level of the column.</li>
+<li><code>topLevel</code>: The top level of the column.</li>
+</ul>
+<h4 id="returns_4">Returns:<a class="headerlink" href="#returns_4" title="Permanent link">&para;</a></h4>
+<p>The created column Element, or null if no column was created.</p>
+<hr />
+<h3 id="searchorcreate3dviewautodeskrevitdbdocumentsystemstring">SearchOrCreate3DView(Autodesk.Revit.DB.Document,System.String)<a class="headerlink" href="#searchorcreate3dviewautodeskrevitdbdocumentsystemstring" title="Permanent link">&para;</a></h3>
+<p><strong>Summary:</strong> Searches for a 3D view with the specified name. If it exists, returns it. Otherwise, creates a new 3D view.</p>
+<h4 id="parameters_5">Parameters:<a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>doc</code>: The Revit document to search or create the 3D view in.</li>
+<li><code>viewName</code>: The name of the 3D view to search for or create.</li>
+</ul>
+<h4 id="returns_5">Returns:<a class="headerlink" href="#returns_5" title="Permanent link">&para;</a></h4>
+<p>The existing or newly created View3D object.</p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../CollectionExtensions/" class="btn btn-neutral float-right" title="Collection Extensions">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../CollectionExtensions/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
