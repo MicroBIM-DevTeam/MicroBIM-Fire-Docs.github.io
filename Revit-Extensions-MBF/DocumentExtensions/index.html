@@ -1518,14 +1518,16 @@
 
 
 <h1 id="documentextensions">DocumentExtensions<a class="headerlink" href="#documentextensions" title="Permanent link">&para;</a></h1>
-<p>!!! info "Summary"</p>
-<pre><code>Revit.Extensions.DocumentExtensions.DocumentExtensions
-</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p>Revit.Extensions.DocumentExtensions.DocumentExtensions</p>
+</div>
 <h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
 <h3 id="getfamilytypesbycategoryorderedbyname"><code>GetFamilyTypesByCategoryOrderedByName</code><a class="headerlink" href="#getfamilytypesbycategoryorderedbyname" title="Permanent link">&para;</a></h3>
-<p>!!! info "Summary"</p>
-<pre><code>Retrieves all family types of the specified category from the given Revit document as an ObservableCollection.
-</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p>Retrieves all family types of the specified category from the given Revit document as an ObservableCollection.</p>
+</div>
 <h4 id="parameters">Parameters:<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -1536,13 +1538,15 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
+<td><code>doc</code></td>
+<td>The Revit document to search for family types.</td>
+</tr>
+<tr>
+<td><code>category</code></td>
+<td>The BuiltInCategory to filter family types.</td>
 </tr>
 </tbody>
 </table>
-<p>| <code>doc</code> | The Revit document to search for family types. |</p>
-<p>| <code>category</code> | The BuiltInCategory to filter family types. |</p>
 <h4 id="returns">Returns:<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
 <p>An ObservableCollection containing all FamilySymbol objects representing the specified category.</p>
 <h4 id="example-usage">Example Usage:<a class="headerlink" href="#example-usage" title="Permanent link">&para;</a></h4>
@@ -1552,10 +1556,11 @@ var result = Revit.Extensions.DocumentExtensions.DocumentExtensions.GetFamilyTyp
 
 </code></pre>
 <h3 id="getlevelsorderedbyproperty1"><code>GetLevelsOrderedByProperty``1</code><a class="headerlink" href="#getlevelsorderedbyproperty1" title="Permanent link">&para;</a></h3>
-<p>!!! info "Summary"</p>
-<pre><code>Retrieves all levels from the specified Revit document as an ObservableCollection,
-        with dynamic ordering based on a specified property.
-</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p>Retrieves all levels from the specified Revit document as an ObservableCollection,
+        with dynamic ordering based on a specified property.</p>
+</div>
 <h4 id="parameters_1">Parameters:<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -1566,14 +1571,19 @@ var result = Revit.Extensions.DocumentExtensions.DocumentExtensions.GetFamilyTyp
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
+<td><code>doc</code></td>
+<td>The Revit document to search for levels.</td>
+</tr>
+<tr>
+<td><code>keySelector</code></td>
+<td>A function to extract a key from a Level for ordering.</td>
+</tr>
+<tr>
+<td><code>ascending</code></td>
+<td>If true, orders levels in ascending order; otherwise, descending.</td>
 </tr>
 </tbody>
 </table>
-<p>| <code>doc</code> | The Revit document to search for levels. |</p>
-<p>| <code>keySelector</code> | A function to extract a key from a Level for ordering. |</p>
-<p>| <code>ascending</code> | If true, orders levels in ascending order; otherwise, descending. |</p>
 <h4 id="returns_1">Returns:<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
 <p>An ObservableCollection containing Level objects, ordered dynamically by the specified property.</p>
 <h4 id="example-usage_1">Example Usage:<a class="headerlink" href="#example-usage_1" title="Permanent link">&para;</a></h4>
@@ -1583,9 +1593,10 @@ var result = Revit.Extensions.DocumentExtensions.DocumentExtensions.GetLevelsOrd
 
 </code></pre>
 <h3 id="getrebarshapes"><code>GetRebarShapes</code><a class="headerlink" href="#getrebarshapes" title="Permanent link">&para;</a></h3>
-<p>!!! info "Summary"</p>
-<pre><code>Retrieves all rebar shapes from the specified Revit document.
-</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p>Retrieves all rebar shapes from the specified Revit document.</p>
+</div>
 <h4 id="parameters_2">Parameters:<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -1596,12 +1607,11 @@ var result = Revit.Extensions.DocumentExtensions.DocumentExtensions.GetLevelsOrd
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
+<td><code>doc</code></td>
+<td>The Revit document to retrieve rebar shapes from.</td>
 </tr>
 </tbody>
 </table>
-<p>| <code>doc</code> | The Revit document to retrieve rebar shapes from. |</p>
 <h4 id="returns_2">Returns:<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
 <p>A list of RebarShape objects available in the document.</p>
 <h4 id="example-usage_2">Example Usage:<a class="headerlink" href="#example-usage_2" title="Permanent link">&para;</a></h4>
@@ -1611,9 +1621,10 @@ var result = Revit.Extensions.DocumentExtensions.DocumentExtensions.GetRebarShap
 
 </code></pre>
 <h3 id="getrebarbartypes"><code>GetRebarBarTypes</code><a class="headerlink" href="#getrebarbartypes" title="Permanent link">&para;</a></h3>
-<p>!!! info "Summary"</p>
-<pre><code>Retrieves all rebar bar types from the specified Revit document as an ObservableCollection.
-</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p>Retrieves all rebar bar types from the specified Revit document as an ObservableCollection.</p>
+</div>
 <h4 id="parameters_3">Parameters:<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -1624,12 +1635,11 @@ var result = Revit.Extensions.DocumentExtensions.DocumentExtensions.GetRebarShap
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
+<td><code>doc</code></td>
+<td>The Revit document to retrieve rebar bar types from.</td>
 </tr>
 </tbody>
 </table>
-<p>| <code>doc</code> | The Revit document to retrieve rebar bar types from. |</p>
 <h4 id="returns_3">Returns:<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
 <p>An ObservableCollection containing all RebarBarType objects in the document.</p>
 <h4 id="example-usage_3">Example Usage:<a class="headerlink" href="#example-usage_3" title="Permanent link">&para;</a></h4>
@@ -1639,9 +1649,10 @@ var result = Revit.Extensions.DocumentExtensions.DocumentExtensions.GetRebarBarT
 
 </code></pre>
 <h3 id="createandplacecolumnatpoint"><code>CreateAndPlaceColumnAtPoint</code><a class="headerlink" href="#createandplacecolumnatpoint" title="Permanent link">&para;</a></h3>
-<p>!!! info "Summary"</p>
-<pre><code>Prompts the user to select a point and places a column at that point.
-</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p>Prompts the user to select a point and places a column at that point.</p>
+</div>
 <h4 id="parameters_4">Parameters:<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -1652,16 +1663,27 @@ var result = Revit.Extensions.DocumentExtensions.DocumentExtensions.GetRebarBarT
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
+<td><code>doc</code></td>
+<td>The Revit document where the column will be placed.</td>
+</tr>
+<tr>
+<td><code>point</code></td>
+<td>The XYZ point where the column will be placed.</td>
+</tr>
+<tr>
+<td><code>columnType</code></td>
+<td>The FamilySymbol representing the column type.</td>
+</tr>
+<tr>
+<td><code>baseLevel</code></td>
+<td>The base level of the column.</td>
+</tr>
+<tr>
+<td><code>topLevel</code></td>
+<td>The top level of the column.</td>
 </tr>
 </tbody>
 </table>
-<p>| <code>doc</code> | The Revit document where the column will be placed. |</p>
-<p>| <code>point</code> | The XYZ point where the column will be placed. |</p>
-<p>| <code>columnType</code> | The FamilySymbol representing the column type. |</p>
-<p>| <code>baseLevel</code> | The base level of the column. |</p>
-<p>| <code>topLevel</code> | The top level of the column. |</p>
 <h4 id="returns_4">Returns:<a class="headerlink" href="#returns_4" title="Permanent link">&para;</a></h4>
 <p>The created column Element, or null if no column was created.</p>
 <h4 id="example-usage_4">Example Usage:<a class="headerlink" href="#example-usage_4" title="Permanent link">&para;</a></h4>
@@ -1671,9 +1693,10 @@ var result = Revit.Extensions.DocumentExtensions.DocumentExtensions.CreateAndPla
 
 </code></pre>
 <h3 id="searchorcreate3dview"><code>SearchOrCreate3DView</code><a class="headerlink" href="#searchorcreate3dview" title="Permanent link">&para;</a></h3>
-<p>!!! info "Summary"</p>
-<pre><code>Searches for a 3D view with the specified name. If it exists, returns it. Otherwise, creates a new 3D view.
-</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p>Searches for a 3D view with the specified name. If it exists, returns it. Otherwise, creates a new 3D view.</p>
+</div>
 <h4 id="parameters_5">Parameters:<a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -1684,13 +1707,15 @@ var result = Revit.Extensions.DocumentExtensions.DocumentExtensions.CreateAndPla
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
+<td><code>doc</code></td>
+<td>The Revit document to search or create the 3D view in.</td>
+</tr>
+<tr>
+<td><code>viewName</code></td>
+<td>The name of the 3D view to search for or create.</td>
 </tr>
 </tbody>
 </table>
-<p>| <code>doc</code> | The Revit document to search or create the 3D view in. |</p>
-<p>| <code>viewName</code> | The name of the 3D view to search for or create. |</p>
 <h4 id="returns_5">Returns:<a class="headerlink" href="#returns_5" title="Permanent link">&para;</a></h4>
 <p>The existing or newly created View3D object.</p>
 <h4 id="example-usage_5">Example Usage:<a class="headerlink" href="#example-usage_5" title="Permanent link">&para;</a></h4>
